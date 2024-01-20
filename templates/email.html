@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Email Sender</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="email-adress">Email:</label>
+    <input name="email-adress" type="email" placeholder="example@example.com">
+    <button type="submit">Add Email</button>
+</form>
+
+<h2>Email List</h2>
+<ul>
+    {% for email in email_list %}
+    <li>{{ email }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
