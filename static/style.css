@@ -76,3 +76,47 @@ button{
     width: auto;
     margin: 0;
 }
+
+@media only screen and (min-width: 1000px){
+    .mq-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    form{
+        padding-bottom: 30px;
+    }
+    .receiver-list{
+        height: 30vh;
+    }
+    .subject-message{
+        width: 55%;
+    }
+    .mail-to{
+        width: 35%;
+    }
+    button{
+        width: 50%;
+    }
+    #send-mail{
+        display: flex;
+        flex-direction: column;
+    }
+    #add-mail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #add-mail input{
+        width: 55%;
+        margin: 0;
+    }
+    #add-mail button{
+        width: 35%;
+        margin: 0;
+    }
+    #send-mail button{
+        margin: auto;
+        margin-top: 20px;
+    }
+}

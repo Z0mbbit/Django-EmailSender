@@ -5,7 +5,7 @@
     <h1>Email Sender</h1>
     <section>
         <h2>Add Emails:</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form id="add-mail" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <input name="email-adress" type="email" placeholder="example@example.com">
             <button type="submit">Add Email</button>
@@ -21,20 +21,27 @@
 
     <section>
         <h2>Send a mail:</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form id="send-mail" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <label for="subject">Subject:</label>
-            <input name="subject" type="text" placeholder="Subject of the Email">
-            <label for="message">Message:</label>
-            <textarea name="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
-            <label for="receiver">Mail to:</label>
-            <div class="receiver-list">
-                {% for email in email_list %}
-                <div class="flex">
-                    <input class="checkbox" type="checkbox" value="{{ email }}" name="receiver_input">
-                    <label for="checkbox">{{ email }}</label>
+            <div class="mq-flex">
+                <div class="subject-message">
+                    <label for="subject">Subject:</label>
+                    <input name="subject" type="text" placeholder="Subject of the Email">
+                    <label for="message">Message:</label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
                 </div>
-                {% endfor %}
+                
+                <div class="mail-to">
+                    <label for="receiver">Mail to:</label>
+                    <div class="receiver-list">
+                        {% for email in email_list %}
+                        <div class="flex">
+                            <input class="checkbox" type="checkbox" value="{{ email }}" name="receiver_input">
+                            <label for="checkbox">{{ email }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
             <button type="submit">Send</button>
         </form>
