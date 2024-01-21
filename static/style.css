@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: None;
+    text-decoration: None;
+}
+
+.flex{
+    display: flex;
+    gap: 5px;
+}
+
+h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+h2{
+    margin: 20px 0;
+}
+
+section{
+    width: 80vw;
+    margin: auto;
+    border: 1px solid rgba(128, 128, 128, 0.101);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #0000001d;
+    margin-bottom: 30px;
+}
+
+input, textarea{
+    box-sizing: border-box;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    resize: none;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(76, 195, 88);
+    box-shadow: 3px 3px 5px #00000046;
+}
+.receiver-list{
+    border: 1px solid rgba(128, 128, 128, 0.101);
+    border-radius: 5px;
+    padding: 5px 5px;
+    height: 20vh;
+    overflow-y: scroll;
+}
+.receiver-list div{
+    background-color: rgba(128, 128, 128, 0.052);
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: baseline;
+    box-shadow: 3px 3px 5px #00000027;
+}
+.receiver-list label{
+    margin: 0;
+}
+.checkbox{
+    width: auto;
+    margin: 0;
+}
